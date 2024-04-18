@@ -70,6 +70,9 @@ class main:
         print('QR 코드는 output.html 파일을 확인하세요.')
         print(f'User Name:{user_name}')
         print(f'OTP Key:{key}')
+        print('========================================')
+        print('OTP 검증을 시작합니다.\nQR 코드를 등록하세요.')
+        self.__validate_otp(otp_key=key)
       
         
     def __gen_qrcode(self, data):
@@ -81,11 +84,11 @@ class main:
         find_data = self.db.find_user(user_name=user_name)
         if(len(find_data) > 0 ):
             otp_key = find_data[0]['otp-key']
-            self.__validate_otp(user_name=user_name,otp_key=otp_key)
+            self.__validate_otp(otp_key=otp_key)
         else:
             print('ID를 확인하세요.')
         
-    def __validate_otp(self, user_name, otp_key):
+    def __validate_otp(self, otp_key):
         totp = pyotp.TOTP(otp_key)
         
         validate_key = input('생성된 OTP를 입력하세요==>')
