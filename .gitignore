@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 # vscode
 .vscode/
+
+# Sample Result
+output.html
+user_list.json
