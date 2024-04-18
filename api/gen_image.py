@@ -1,3 +1,4 @@
+import os
 import pyqrcode
 import io
 import base64
@@ -25,5 +26,6 @@ class get_image:
     def __save_html(self, val_tag):
         with open("output.html", "w") as file:
             file.writelines(val_tag)
-        
+            
         print('Save HTML')
+        
