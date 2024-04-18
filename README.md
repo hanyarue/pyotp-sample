@@ -3,6 +3,9 @@
 
 PyOTP 라이브러리를 활용한 OTP 생성 및 QR 코드, OTP Key 관리 콘솔 Sample
 
+## 실행화면
+![Sample](assets/screenshot-sample.png)
+
 ## 실행방법
 
 1. `pip install -r requirements.txt` 실행하여 라이브러리 설치
