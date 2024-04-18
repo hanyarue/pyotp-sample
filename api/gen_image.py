@@ -4,10 +4,25 @@ import io
 import base64
 
 
-class get_image:
-    data = None
+class get_image:    
+    """
+    QR Code 생성 모듈
+
+    ...
+
+    Info.
+    -----
+    Date: 20240418
     
-    def __init__(self, data):
+    by. MBHAN    
+    
+    Methods
+    -------
+    create_qr()
+        QR Code 생성 및 파일 저장
+    """
+    
+    def __init__(self, data=None):
         self.data = data
     
     def create_qr(self):

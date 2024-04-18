@@ -2,6 +2,26 @@ import json,time
 
 
 class db_handler:
+    """
+    JSON Data Handler
+
+    ...
+
+    Info.
+    -----
+    Date: 20240418
+    
+    by. MBHAN    
+    
+    Methods
+    -------
+    register_user(user_name, otp_key)
+        사용자 등록 처리
+        
+    find_user(user_name)
+        단일 사용자 정보 조회
+    """
+    
     __file_name = 'user_list.json'
     __init_data = {
                     "list": [] 

@@ -3,19 +3,27 @@ from api.gen_image import get_image
 import pyotp
 import time
 
-
-
 class main:
+    """
+    PyOTP-Sample Main Class
+
+    ...
+
+    Info.
+    -----
+    Date: 20240418
     
+    by. MBHAN    
+    
+    Methods
+    -------
+    task()
+        Init Program        
+    """
     def __init__(self):
         self.db = db_handler()
         self.json_data = self.db.data
-   
 
-        # # OTP verified for current time
-        # totp.verify('492039') # => True
-        # #time.sleep(30)
-        # totp.verify('492039') # => False
     def task(self):
          
         self.json_data = self.db.data
@@ -40,11 +48,9 @@ class main:
             except Exception:
                 exit(1)
         
-    def __register_otp(self):
-        
+    def __register_otp(self):        
                
-        user_name = input("사용자 이름을 입력하세요.(ex. User ID)::")
-        
+        user_name = input("사용자 이름을 입력하세요.(ex. User ID)::")        
         
         key = pyotp.random_base32()
         print(f'key==>{key}')
@@ -64,8 +70,6 @@ class main:
         print('QR 코드는 output.html 파일을 확인하세요.')
         print(f'User Name:{user_name}')
         print(f'OTP Key:{key}')
-        
-
       
         
     def __gen_qrcode(self, data):
@@ -91,13 +95,6 @@ class main:
             print('유효한 OTP 입니다.')
         else:
             print('유효하지 않은 OTP 입니다.')
-        
-        
-        
-    # def validate_otp(self):
-        
-        
-        
         
         
 if __name__ == "__main__":
