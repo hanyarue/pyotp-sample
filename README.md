@@ -3,6 +3,9 @@
 
 PyOTP 라이브러리를 활용한 OTP 생성 및 QR 코드, OTP Key 관리 콘솔 Sample
 
+## Process
+![Process](assets/screenshot-process.png)
+
 ## 실행화면
 ![Sample](assets/screenshot-sample.png)
 
